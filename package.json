@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-solidity",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-RC1",
   "description": "prettier plugin for solidity",
   "main": "src",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/prettier-solidity/prettier-plugin-solidity.git"
+    "url": "git+https://github.com/sambacha/prettier-plugin-solidity.git"
   },
   "keywords": [
     "ethereum",
@@ -51,13 +51,17 @@
     {
       "email": "klahott@gmail.com",
       "name": "Klaus Hott Vidal"
+    },
+    {
+      "email": "sambacha@gmail.com",
+      "name": "Sam Bacha"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prettier-solidity/prettier-plugin-solidity/issues"
+    "url": "https://github.com/sambacha/prettier-plugin-solidity/issues"
   },
-  "homepage": "https://github.com/prettier-solidity/prettier-plugin-solidity#readme",
+  "homepage": "https://github.com/sambacha/prettier-plugin-solidity#readme",
   "engines": {
     "node": ">=10"
   },
