@@ -1,5 +1,9 @@
 const EmitStatement = {
-  print: ({ path, print }) => ['emit ', path.call(print, 'eventCall'), ';']
+  print: ({
+    path,
+    print
+  }: any) => ['emit ', path.call(print, 'eventCall'), ';']
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = EmitStatement;

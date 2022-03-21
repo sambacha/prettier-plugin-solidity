@@ -1,13 +1,17 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
     builders: { hardline }
   },
+  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isNextLine... Remove this comment to see the full error message
   util: { isNextLineEmptyAfterIndex }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
-function printPreservingEmptyLines(path, key, options, print) {
-  const parts = [];
-  path.each((childPath) => {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+function printPreservingEmptyLines(path: any, key: any, options: any, print: any) {
+  const parts: any = [];
+  path.each((childPath: any) => {
     const node = childPath.getValue();
     const nodeType = node.type;
 
@@ -50,4 +54,5 @@ function printPreservingEmptyLines(path, key, options, print) {
   return parts;
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = printPreservingEmptyLines;

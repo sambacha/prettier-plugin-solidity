@@ -1,10 +1,12 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
     builders: { group, indent, label, softline }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
-const isEndOfChain = (node, path) => {
+const isEndOfChain = (node: any, path: any) => {
   let i = 0;
   let currentNode = node;
   let parentNode = path.getParentNode(i);
@@ -93,9 +95,9 @@ const isEndOfChain = (node, path) => {
  * @returns a processed doc[] with the proper grouping and indentation ready to
  * be printed.
  */
-const processChain = (chain) => {
+const processChain = (chain: any) => {
   const firstSeparatorIndex = chain.findIndex(
-    (element) => element.label === 'separator'
+    (element: any) => element.label === 'separator'
   );
   // The doc[] before the first separator
   const firstExpression = chain.slice(0, firstSeparatorIndex);
@@ -108,9 +110,14 @@ const processChain = (chain) => {
 };
 
 const MemberAccess = {
-  print: ({ node, path, print }) => {
+  print: ({
+    node,
+    path,
+    print
+  }: any) => {
     let expressionDoc = path.call(print, 'expression');
     if (Array.isArray(expressionDoc)) {
+      // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
       expressionDoc = expressionDoc.flat();
     }
 
@@ -118,10 +125,12 @@ const MemberAccess = {
       expressionDoc,
       label('separator', [softline, '.']),
       node.memberName
+    // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
     ].flat();
 
     return isEndOfChain(node, path) ? processChain(doc) : doc;
   }
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = MemberAccess;

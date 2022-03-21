@@ -1,13 +1,21 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
     builders: { hardline }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
 const printComments = require('./print-comments');
 
 const ExpressionStatement = {
-  print: ({ node, options, path, print }) => {
+  print: ({
+    node,
+    options,
+    path,
+    print
+  }: any) => {
     const parts = [];
 
     const parent = path.getParentNode();
@@ -29,4 +37,5 @@ const ExpressionStatement = {
   }
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = ExpressionStatement;

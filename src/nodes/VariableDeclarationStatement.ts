@@ -1,22 +1,31 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
     builders: { group, ifBreak, indent }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
 const printSeparatedList = require('./print-separated-list');
 
-const embraceVariables = (doc, embrace) =>
+const embraceVariables = (doc: any, embrace: any) =>
   embrace ? ['(', printSeparatedList(doc), ')'] : doc;
 
-const initialValue = (node, path, print) =>
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'initialVal... Remove this comment to see the full error message
+const initialValue = (node: any, path: any, print: any) =>
   node.initialValue ? [' = ', path.call(print, 'initialValue')] : '';
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
 let groupIndex = 0;
 const VariableDeclarationStatement = {
-  print: ({ node, path, print }) => {
+  print: ({
+    node,
+    path,
+    print
+  }: any) => {
     const startsWithVar =
-      node.variables.filter((x) => x && x.typeName).length === 0;
+      node.variables.filter((x: any) => x && x.typeName).length === 0;
 
     const declarationDoc = group(
       [
@@ -41,4 +50,5 @@ const VariableDeclarationStatement = {
   }
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = VariableDeclarationStatement;

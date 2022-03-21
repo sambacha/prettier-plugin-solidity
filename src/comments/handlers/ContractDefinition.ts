@@ -1,19 +1,25 @@
 const {
   util: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addLeading... Remove this comment to see the full error message
     addLeadingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addTrailin... Remove this comment to see the full error message
     addTrailingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addDanglin... Remove this comment to see the full error message
     addDanglingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
     getNextNonSpaceNonCommentCharacterIndex
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleCont... Remove this comment to see the full error message
 function handleContractDefinitionComments(
-  text,
-  precedingNode,
-  enclosingNode,
-  followingNode,
-  comment,
-  options
+  text: any,
+  precedingNode: any,
+  enclosingNode: any,
+  followingNode: any,
+  comment: any,
+  options: any
 ) {
   if (!enclosingNode || enclosingNode.type !== 'ContractDefinition') {
     return false;
@@ -57,4 +63,5 @@ function handleContractDefinitionComments(
   return false;
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = handleContractDefinitionComments;

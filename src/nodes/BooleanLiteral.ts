@@ -1,5 +1,8 @@
 const BooleanLiteral = {
-  print: ({ node }) => (node.value ? 'true' : 'false')
+  print: ({
+    node
+  }: any) => (node.value ? 'true' : 'false')
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = BooleanLiteral;

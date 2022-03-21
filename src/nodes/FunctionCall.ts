@@ -1,17 +1,20 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
     builders: { group, ifBreak, indent, label, line, softline }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
 const printSeparatedList = require('./print-separated-list');
 
-const printObject = (node, path, print, options) => [
+const printObject = (node: any, path: any, print: any, options: any) => [
   '{',
   printSeparatedList(
     path
       .map(print, 'arguments')
-      .map((arg, index) => [node.names[index], ': ', arg]),
+      .map((arg: any, index: any) => [node.names[index], ': ', arg]),
     {
       firstSeparator: options.bracketSpacing ? line : softline,
       lastSeparator: [options.bracketSpacing ? line : softline, '})']
@@ -19,19 +22,27 @@ const printObject = (node, path, print, options) => [
   )
 ];
 
-const printArguments = (path, print) =>
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printArgum... Remove this comment to see the full error message
+const printArguments = (path: any, print: any) =>
   printSeparatedList(path.map(print, 'arguments'), {
     lastSeparator: [softline, ')']
   });
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
 let groupIndex = 0;
 const FunctionCall = {
-  print: ({ node, path, print, options }) => {
+  print: ({
+    node,
+    path,
+    print,
+    options
+  }: any) => {
     let expressionDoc = path.call(print, 'expression');
     let argumentsDoc = ')';
 
     if (node.arguments && node.arguments.length > 0) {
       if (node.names && node.names.length > 0) {
+        // @ts-expect-error ts-migrate(2322) FIXME: Type 'any[]' is not assignable to type 'string'.
         argumentsDoc = printObject(node, path, print, options);
       } else {
         argumentsDoc = printArguments(path, print);
@@ -59,4 +70,5 @@ const FunctionCall = {
   }
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = FunctionCall;

@@ -1,7 +1,12 @@
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const prettier = require('prettier');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
 const semver = require('semver');
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const nodes = require('./nodes');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNodeIgn... Remove this comment to see the full error message
 const { hasNodeIgnoreComment } = require('./prettier-comments/common/util');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ignoreComm... Remove this comment to see the full error message
 const ignoreComments = require('./comments/ignore');
 
 let checked = false;
@@ -16,7 +21,7 @@ function prettierVersionCheck() {
   checked = true;
 }
 
-function genericPrint(path, options, print) {
+function genericPrint(path: any, options: any, print: any) {
   prettierVersionCheck();
 
   const node = path.getValue();
@@ -40,4 +45,5 @@ function genericPrint(path, options, print) {
   return nodes[node.type].print({ node, options, path, print });
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = genericPrint;

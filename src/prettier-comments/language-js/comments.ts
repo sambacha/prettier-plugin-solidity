@@ -2,15 +2,22 @@
 
 const {
   util: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addLeading... Remove this comment to see the full error message
     addLeadingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addTrailin... Remove this comment to see the full error message
     addTrailingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addDanglin... Remove this comment to see the full error message
     addDanglingComment,
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
     getNextNonSpaceNonCommentCharacterIndex
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const privateUtil = require("../common/util");
 
-function handleOwnLineComment(comment, text, options, ast, isLastComment) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleOwnL... Remove this comment to see the full error message
+function handleOwnLineComment(comment: any, text: any, options: any, ast: any, isLastComment: any) {
   const { precedingNode, enclosingNode, followingNode } = comment;
   if (
     handleLastFunctionArgComments(
@@ -75,7 +82,8 @@ function handleOwnLineComment(comment, text, options, ast, isLastComment) {
   return false;
 }
 
-function handleEndOfLineComment(comment, text, options, ast, isLastComment) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleEndO... Remove this comment to see the full error message
+function handleEndOfLineComment(comment: any, text: any, options: any, ast: any, isLastComment: any) {
   const { precedingNode, enclosingNode, followingNode } = comment;
   if (
     handleLastFunctionArgComments(
@@ -130,7 +138,8 @@ function handleEndOfLineComment(comment, text, options, ast, isLastComment) {
   return false;
 }
 
-function handleRemainingComment(comment, text, options, ast, isLastComment) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleRema... Remove this comment to see the full error message
+function handleRemainingComment(comment: any, text: any, options: any, ast: any, isLastComment: any) {
   const { precedingNode, enclosingNode, followingNode } = comment;
 
   if (
@@ -182,13 +191,13 @@ function handleRemainingComment(comment, text, options, ast, isLastComment) {
   return false;
 }
 
-function addBlockStatementFirstComment(node, comment) {
+function addBlockStatementFirstComment(node: any, comment: any) {
   if (!node.body) {
     addDanglingComment(node, comment);
     return;
   }
 
-  const body = node.body.filter(n => n.type !== "EmptyStatement");
+  const body = node.body.filter((n: any) => n.type !== "EmptyStatement");
   if (body.length === 0) {
     addDanglingComment(node, comment);
   } else {
@@ -196,7 +205,7 @@ function addBlockStatementFirstComment(node, comment) {
   }
 }
 
-function addBlockOrNotComment(node, comment) {
+function addBlockOrNotComment(node: any, comment: any) {
   if (node.type === "BlockStatement") {
     addBlockStatementFirstComment(node, comment);
   } else {
@@ -221,12 +230,12 @@ function addBlockOrNotComment(node, comment) {
 //     ...
 //   }
 function handleIfStatementComments(
-  text,
-  precedingNode,
-  enclosingNode,
-  followingNode,
-  comment,
-  options
+  text: any,
+  precedingNode: any,
+  enclosingNode: any,
+  followingNode: any,
+  comment: any,
+  options: any
 ) {
   if (
     !enclosingNode ||
@@ -290,12 +299,12 @@ function handleIfStatementComments(
 }
 
 function handleWhileComments(
-  text,
-  precedingNode,
-  enclosingNode,
-  followingNode,
-  comment,
-  options
+  text: any,
+  precedingNode: any,
+  enclosingNode: any,
+  followingNode: any,
+  comment: any,
+  options: any
 ) {
   if (
     !enclosingNode ||
@@ -330,10 +339,10 @@ function handleWhileComments(
 
 // Same as IfStatement but for TryStatement
 function handleTryStatementComments(
-  enclosingNode,
-  precedingNode,
-  followingNode,
-  comment
+  enclosingNode: any,
+  precedingNode: any,
+  followingNode: any,
+  comment: any
 ) {
   if (
     !enclosingNode ||
@@ -367,7 +376,7 @@ function handleTryStatementComments(
   return false;
 }
 
-function handleMemberExpressionComments(enclosingNode, followingNode, comment) {
+function handleMemberExpressionComments(enclosingNode: any, followingNode: any, comment: any) {
   if (
     enclosingNode &&
     enclosingNode.type === "MemberExpression" &&
@@ -382,12 +391,12 @@ function handleMemberExpressionComments(enclosingNode, followingNode, comment) {
 }
 
 function handleConditionalExpressionComments(
-  enclosingNode,
-  precedingNode,
-  followingNode,
-  comment,
-  text,
-  options
+  enclosingNode: any,
+  precedingNode: any,
+  followingNode: any,
+  comment: any,
+  text: any,
+  options: any
 ) {
   const isSameLineAsPrecedingNode =
     precedingNode &&
@@ -409,7 +418,7 @@ function handleConditionalExpressionComments(
   return false;
 }
 
-function handleObjectPropertyAssignment(enclosingNode, precedingNode, comment) {
+function handleObjectPropertyAssignment(enclosingNode: any, precedingNode: any, comment: any) {
   if (
     enclosingNode &&
     (enclosingNode.type === "ObjectProperty" ||
@@ -425,10 +434,10 @@ function handleObjectPropertyAssignment(enclosingNode, precedingNode, comment) {
 }
 
 function handleClassComments(
-  enclosingNode,
-  precedingNode,
-  followingNode,
-  comment
+  enclosingNode: any,
+  precedingNode: any,
+  followingNode: any,
+  comment: any
 ) {
   if (
     enclosingNode &&
@@ -451,11 +460,11 @@ function handleClassComments(
 }
 
 function handleMethodNameComments(
-  text,
-  enclosingNode,
-  precedingNode,
-  comment,
-  options
+  text: any,
+  enclosingNode: any,
+  precedingNode: any,
+  comment: any,
+  options: any
 ) {
   // This is only needed for estree parsers (flow, typescript) to attach
   // after a method name:
@@ -499,11 +508,11 @@ function handleMethodNameComments(
 }
 
 function handleFunctionNameComments(
-  text,
-  enclosingNode,
-  precedingNode,
-  comment,
-  options
+  text: any,
+  enclosingNode: any,
+  precedingNode: any,
+  comment: any,
+  options: any
 ) {
   if (
     privateUtil.getNextNonSpaceNonCommentCharacter(
@@ -530,7 +539,7 @@ function handleFunctionNameComments(
   return false;
 }
 
-function handleCommentAfterArrowParams(text, enclosingNode, comment, options) {
+function handleCommentAfterArrowParams(text: any, enclosingNode: any, comment: any, options: any) {
   if (!(enclosingNode && enclosingNode.type === "ArrowFunctionExpression")) {
     return false;
   }
@@ -548,7 +557,7 @@ function handleCommentAfterArrowParams(text, enclosingNode, comment, options) {
   return false;
 }
 
-function handleCommentInEmptyParens(text, enclosingNode, comment, options) {
+function handleCommentInEmptyParens(text: any, enclosingNode: any, comment: any, options: any) {
   if (
     privateUtil.getNextNonSpaceNonCommentCharacter(
       text,
@@ -590,12 +599,12 @@ function handleCommentInEmptyParens(text, enclosingNode, comment, options) {
 }
 
 function handleLastFunctionArgComments(
-  text,
-  precedingNode,
-  enclosingNode,
-  followingNode,
-  comment,
-  options
+  text: any,
+  precedingNode: any,
+  enclosingNode: any,
+  followingNode: any,
+  comment: any,
+  options: any
 ) {
   // Type definitions functions
   if (
@@ -633,7 +642,7 @@ function handleLastFunctionArgComments(
   return false;
 }
 
-function handleImportSpecifierComments(enclosingNode, comment) {
+function handleImportSpecifierComments(enclosingNode: any, comment: any) {
   if (enclosingNode && enclosingNode.type === "ImportSpecifier") {
     addLeadingComment(enclosingNode, comment);
     return true;
@@ -641,7 +650,7 @@ function handleImportSpecifierComments(enclosingNode, comment) {
   return false;
 }
 
-function handleLabeledStatementComments(enclosingNode, comment) {
+function handleLabeledStatementComments(enclosingNode: any, comment: any) {
   if (enclosingNode && enclosingNode.type === "LabeledStatement") {
     addLeadingComment(enclosingNode, comment);
     return true;
@@ -649,7 +658,7 @@ function handleLabeledStatementComments(enclosingNode, comment) {
   return false;
 }
 
-function handleBreakAndContinueStatementComments(enclosingNode, comment) {
+function handleBreakAndContinueStatementComments(enclosingNode: any, comment: any) {
   if (
     enclosingNode &&
     (enclosingNode.type === "ContinueStatement" ||
@@ -662,7 +671,7 @@ function handleBreakAndContinueStatementComments(enclosingNode, comment) {
   return false;
 }
 
-function handleCallExpressionComments(precedingNode, enclosingNode, comment) {
+function handleCallExpressionComments(precedingNode: any, enclosingNode: any, comment: any) {
   if (
     enclosingNode &&
     enclosingNode.type === "CallExpression" &&
@@ -677,10 +686,10 @@ function handleCallExpressionComments(precedingNode, enclosingNode, comment) {
 }
 
 function handleUnionTypeComments(
-  precedingNode,
-  enclosingNode,
-  followingNode,
-  comment
+  precedingNode: any,
+  enclosingNode: any,
+  followingNode: any,
+  comment: any
 ) {
   if (
     enclosingNode &&
@@ -693,7 +702,7 @@ function handleUnionTypeComments(
   return false;
 }
 
-function handlePropertyComments(enclosingNode, comment) {
+function handlePropertyComments(enclosingNode: any, comment: any) {
   if (
     enclosingNode &&
     (enclosingNode.type === "Property" ||
@@ -705,7 +714,7 @@ function handlePropertyComments(enclosingNode, comment) {
   return false;
 }
 
-function handleOnlyComments(enclosingNode, ast, comment, isLastComment) {
+function handleOnlyComments(enclosingNode: any, ast: any, comment: any, isLastComment: any) {
   // With Flow the enclosingNode is undefined so use the AST instead.
   if (ast && ast.body && ast.body.length === 0) {
     if (isLastComment) {
@@ -731,7 +740,7 @@ function handleOnlyComments(enclosingNode, ast, comment, isLastComment) {
   return false;
 }
 
-function handleForComments(enclosingNode, precedingNode, comment) {
+function handleForComments(enclosingNode: any, precedingNode: any, comment: any) {
   if (
     enclosingNode &&
     (enclosingNode.type === "ForInStatement" ||
@@ -744,11 +753,11 @@ function handleForComments(enclosingNode, precedingNode, comment) {
 }
 
 function handleImportDeclarationComments(
-  text,
-  enclosingNode,
-  precedingNode,
-  comment,
-  options
+  text: any,
+  enclosingNode: any,
+  precedingNode: any,
+  comment: any,
+  options: any
 ) {
   if (
     precedingNode &&
@@ -763,7 +772,7 @@ function handleImportDeclarationComments(
   return false;
 }
 
-function handleAssignmentPatternComments(enclosingNode, comment) {
+function handleAssignmentPatternComments(enclosingNode: any, comment: any) {
   if (enclosingNode && enclosingNode.type === "AssignmentPattern") {
     addLeadingComment(enclosingNode, comment);
     return true;
@@ -771,7 +780,7 @@ function handleAssignmentPatternComments(enclosingNode, comment) {
   return false;
 }
 
-function handleTypeAliasComments(enclosingNode, followingNode, comment) {
+function handleTypeAliasComments(enclosingNode: any, followingNode: any, comment: any) {
   if (enclosingNode && enclosingNode.type === "TypeAlias") {
     addLeadingComment(enclosingNode, comment);
     return true;
@@ -780,9 +789,9 @@ function handleTypeAliasComments(enclosingNode, followingNode, comment) {
 }
 
 function handleVariableDeclaratorComments(
-  enclosingNode,
-  followingNode,
-  comment
+  enclosingNode: any,
+  followingNode: any,
+  comment: any
 ) {
   if (
     enclosingNode &&
@@ -801,11 +810,11 @@ function handleVariableDeclaratorComments(
 }
 
 function handleTSMappedTypeComments(
-  text,
-  enclosingNode,
-  precedingNode,
-  followingNode,
-  comment
+  text: any,
+  enclosingNode: any,
+  precedingNode: any,
+  followingNode: any,
+  comment: any
 ) {
   if (!enclosingNode || enclosingNode.type !== "TSMappedType") {
     return false;
@@ -832,10 +841,12 @@ function handleTSMappedTypeComments(
   return false;
 }
 
-function isBlockComment(comment) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isBlockCom... Remove this comment to see the full error message
+function isBlockComment(comment: any) {
   return comment.type === "Block" || comment.type === "CommentBlock";
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = {
   handleOwnLineComment,
   handleEndOfLineComment,

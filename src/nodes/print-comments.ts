@@ -1,19 +1,23 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
     builders: { join, line }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
-const printComments = (node, path, options, filter = () => true) =>
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+const printComments = (node: any, path: any, options: any, filter = () => true) =>
   node.comments
     ? join(
         line,
         path
-          .map((commentPath) => {
+          .map((commentPath: any) => {
             const comment = commentPath.getValue();
             if (comment.trailing || comment.leading || comment.printed) {
               return null;
             }
+            // @ts-expect-error ts-migrate(2554) FIXME: Expected 0 arguments, but got 1.
             if (!filter(comment)) {
               return null;
             }
@@ -24,4 +28,5 @@ const printComments = (node, path, options, filter = () => true) =>
       )
     : '';
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = printComments;

@@ -1,9 +1,12 @@
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 const extractComments = require('solidity-comments-extractor');
 // https://prettier.io/docs/en/plugins.html#parsers
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parser'.
 const parser = require('@solidity-parser/parser');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
 const semver = require('semver');
 
-const tryHug = (node, operators) => {
+const tryHug = (node: any, operators: any) => {
   if (node.type === 'BinaryOperation' && operators.includes(node.operator))
     return {
       type: 'TupleExpression',
@@ -13,13 +16,14 @@ const tryHug = (node, operators) => {
   return node;
 };
 
-function parse(text, _parsers, options) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parse'.
+function parse(text: any, _parsers: any, options: any) {
   const compiler = semver.coerce(options.compiler);
   const parsed = parser.parse(text, { loc: true, range: true });
   parsed.comments = extractComments(text);
 
   parser.visit(parsed, {
-    PragmaDirective(ctx) {
+    PragmaDirective(ctx: any) {
       // if the pragma is not for solidity we leave.
       if (ctx.name !== 'solidity') return;
       // if the compiler option has not been provided we leave.
@@ -34,14 +38,14 @@ function parse(text, _parsers, options) {
         );
       }
     },
-    ModifierDefinition(ctx) {
+    ModifierDefinition(ctx: any) {
       if (!ctx.parameters) {
         ctx.parameters = [];
       }
     },
-    FunctionDefinition(ctx) {
+    FunctionDefinition(ctx: any) {
       if (!ctx.isConstructor) {
-        ctx.modifiers.forEach((modifier) => {
+        ctx.modifiers.forEach((modifier: any) => {
           if (modifier.arguments && modifier.arguments.length === 0) {
             // eslint-disable-next-line no-param-reassign
             modifier.arguments = null;
@@ -49,18 +53,18 @@ function parse(text, _parsers, options) {
         });
       }
     },
-    ForStatement(ctx) {
+    ForStatement(ctx: any) {
       if (ctx.initExpression) {
         ctx.initExpression.omitSemicolon = true;
       }
       ctx.loopExpression.omitSemicolon = true;
     },
-    HexLiteral(ctx) {
+    HexLiteral(ctx: any) {
       ctx.value = options.singleQuote
         ? `hex'${ctx.value.slice(4, -1)}'`
         : `hex"${ctx.value.slice(4, -1)}"`;
     },
-    ElementaryTypeName(ctx) {
+    ElementaryTypeName(ctx: any) {
       // if the compiler is below 0.8.0 we will recognize the type 'byte' as an
       // alias of 'bytes1'. Otherwise we will ignore this and enforce always
       // 'bytes1'.
@@ -77,7 +81,7 @@ function parse(text, _parsers, options) {
         if (pre080 && ctx.name === 'bytes1') ctx.name = 'byte';
       }
     },
-    BinaryOperation(ctx) {
+    BinaryOperation(ctx: any) {
       switch (ctx.operator) {
         case '+':
         case '-':
@@ -193,4 +197,5 @@ function parse(text, _parsers, options) {
   return parsed;
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = parse;

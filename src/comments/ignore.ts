@@ -1,4 +1,5 @@
-function ignoreComments(path) {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ignoreComm... Remove this comment to see the full error message
+function ignoreComments(path: any) {
   const node = path.getValue();
   // We ignore anything that is not an object
   if (node === null || typeof node !== 'object') return;
@@ -12,7 +13,7 @@ function ignoreComments(path) {
         break;
       // The key `comments` will contain every comment for this node
       case 'comments':
-        path.each((commentPath) => {
+        path.each((commentPath: any) => {
           const comment = commentPath.getValue();
           comment.printed = true;
         }, 'comments');
@@ -30,4 +31,5 @@ function ignoreComments(path) {
   });
 }
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = ignoreComments;

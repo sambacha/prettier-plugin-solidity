@@ -1,15 +1,23 @@
 const {
   doc: {
+    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
     builders: { group, line, softline }
   }
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
 const semver = require('semver');
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
 const printSeparatedList = require('./print-separated-list');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
 const { printString } = require('../prettier-comments/common/util');
 
 const ImportDirective = {
-  print: ({ node, options }) => {
+  print: ({
+    node,
+    options
+  }: any) => {
     const importPath = printString(node.path, options);
     let doc;
 
@@ -19,6 +27,7 @@ const ImportDirective = {
     } else if (node.symbolAliases) {
       // import { Foo, Bar as Qux } from "./Foo.sol";
       const compiler = semver.coerce(options.compiler);
+      // @ts-expect-error ts-migrate(7031) FIXME: Binding element 'a' implicitly has an 'any' type.
       const symbolAliases = node.symbolAliases.map(([a, b]) =>
         b ? `${a} as ${b}` : a
       );
@@ -51,4 +60,5 @@ const ImportDirective = {
   }
 };
 
+// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = ImportDirective;
