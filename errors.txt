@@ -1,0 +1,448 @@
+src/clean.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/options.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'options'.
+src/options.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/prettier-comments/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addLeading... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addTrailin... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addDanglin... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleOwnL... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleEndO... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleRema... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isBlockCom... Remove this comment to see the full error message
+src/prettier-comments/language-js/comments.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNewline... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isNextLine... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:  // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:  // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:  // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:  // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:    // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(7023) FIXME: 'startsWithNoLookaheadToken' implicitly has return... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(7023) FIXME: 'getLeftMost' implicitly has return type 'any' bec... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:  // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNodeIgn... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addLeading... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addDanglin... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addTrailin... Remove this comment to see the full error message
+src/prettier-comments/common/util.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/loc.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/parser.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/parser.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parser'.
+src/parser.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
+src/parser.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parse'.
+src/parser.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'options'.
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parse'.
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'print'.
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parser'.
+src/index.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printers'.
+src/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/printer.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/printer.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
+src/printer.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/printer.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNodeIgn... Remove this comment to see the full error message
+src/printer.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ignoreComm... Remove this comment to see the full error message
+src/printer.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/comments/printer.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/comments/printer.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNewline... Remove this comment to see the full error message
+src/comments/printer.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/comments/printer.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/comments/printer.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/shift.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'arithmetic... Remove this comment to see the full error message
+src/binary-operator-printers/shift.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/arithmetic.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/binary-operator-printers/arithmetic.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/arithmetic.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/arithmetic.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIfNec... Remove this comment to see the full error message
+src/binary-operator-printers/arithmetic.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'indentIfNe... Remove this comment to see the full error message
+src/binary-operator-printers/arithmetic.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/comments/handler.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleOwnL... Remove this comment to see the full error message
+src/comments/handler.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleEndO... Remove this comment to see the full error message
+src/comments/handler.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleRema... Remove this comment to see the full error message
+src/comments/handler.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isBlockCom... Remove this comment to see the full error message
+src/comments/handler.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/comments/handler.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleCont... Remove this comment to see the full error message
+src/comments/handler.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/print-comments.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
+src/nodes/print-comments.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/print-comments.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/print-comments.ts:            // @ts-expect-error ts-migrate(2554) FIXME: Expected 0 arguments, but got 1.
+src/nodes/print-comments.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/logical.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/binary-operator-printers/logical.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/logical.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIfNec... Remove this comment to see the full error message
+src/binary-operator-printers/logical.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'indentIfNe... Remove this comment to see the full error message
+src/binary-operator-printers/logical.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/exponentiation.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/binary-operator-printers/exponentiation.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/exponentiation.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/comparison.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/binary-operator-printers/comparison.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/comparison.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'indentIfNe... Remove this comment to see the full error message
+src/binary-operator-printers/comparison.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addLeading... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addTrailin... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'addDanglin... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleCont... Remove this comment to see the full error message
+src/comments/handlers/ContractDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ReturnStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/ReturnStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ReturnStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/Break.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ElementaryTypeName.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'stateMutab... Remove this comment to see the full error message
+src/nodes/ElementaryTypeName.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ModifierInvocation.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ModifierInvocation.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyIf.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/DoWhileStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/DoWhileStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/DoWhileStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/DoWhileStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printBody'... Remove this comment to see the full error message
+src/nodes/DoWhileStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/StructDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/StructDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/StructDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/StructDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/print-preserving-empty-lines.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/print-preserving-empty-lines.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isNextLine... Remove this comment to see the full error message
+src/nodes/print-preserving-empty-lines.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/print-preserving-empty-lines.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+src/nodes/print-preserving-empty-lines.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/UsingForDeclaration.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/PragmaDirective.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/TypeDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyLocalDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'line'.
+src/nodes/AssemblyLocalDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyLocalDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/AssemblyLocalDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/assignment.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/binary-operator-printers/assignment.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/binary-operator-printers/assignment.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/SourceUnit.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'line'.
+src/nodes/SourceUnit.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/SourceUnit.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+src/nodes/SourceUnit.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ImportDirective.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/ImportDirective.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ImportDirective.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
+src/nodes/ImportDirective.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ImportDirective.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
+src/nodes/ImportDirective.ts:      // @ts-expect-error ts-migrate(7031) FIXME: Binding element 'a' implicitly has an 'any' type.
+src/nodes/ImportDirective.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/FileLevelConstant.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/DecimalNumber.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/HexNumber.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/UnaryOperation.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/HexLiteral.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
+src/nodes/HexLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/HexLiteral.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
+src/nodes/HexLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/StringLiteral.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
+src/nodes/StringLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/StringLiteral.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
+src/nodes/StringLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyCase.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/TryStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/TryStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/TryStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/TryStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/TryStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'returnPara... Remove this comment to see the full error message
+src/nodes/TryStatement.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 4 arguments, but got 3.
+src/nodes/TryStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/WhileStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/WhileStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/WhileStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/WhileStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printBody'... Remove this comment to see the full error message
+src/nodes/WhileStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ForStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/ForStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ForStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ForStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printBody'... Remove this comment to see the full error message
+src/nodes/ForStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/UncheckedStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/UncheckedStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/UncheckedStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/NumberLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/BinaryOperation.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printers'.
+src/nodes/BinaryOperation.ts:      // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/nodes/BinaryOperation.ts:        // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/nodes/BinaryOperation.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/LabelDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'dedent'.
+src/nodes/LabelDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/LabelDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/VariableDeclarationStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/VariableDeclarationStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/VariableDeclarationStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/VariableDeclarationStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'initialVal... Remove this comment to see the full error message
+src/nodes/VariableDeclarationStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
+src/nodes/VariableDeclarationStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/EnumDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/EnumDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/EnumDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/EnumDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/InheritanceSpecifier.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/InheritanceSpecifier.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printArgum... Remove this comment to see the full error message
+src/nodes/InheritanceSpecifier.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 2 arguments, but got 3.
+src/nodes/InheritanceSpecifier.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/CustomErrorDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/CustomErrorDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parameters... Remove this comment to see the full error message
+src/nodes/CustomErrorDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'body'.
+src/nodes/ContractDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyMemberAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblySwitch.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/AssemblySwitch.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblySwitch.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyFor.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
+src/nodes/AssemblyFor.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyFor.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/UserDefinedTypeName.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/IndexRangeAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/index.ts:  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyCall.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/AssemblyCall.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/RevertStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/print-separated-list.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/print-separated-list.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/print-separated-list.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/print-separated-list.ts:    // @ts-expect-error ts-migrate(7022) FIXME: 'firstSeparator' implicitly has type 'any' because... Remove this comment to see the full error message
+src/nodes/print-separated-list.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyAssignment.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'join'.
+src/nodes/AssemblyAssignment.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyAssignment.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/StateVariableDeclaration.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/StateVariableDeclaration.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/StateVariableDeclaration.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'initialVal... Remove this comment to see the full error message
+src/nodes/StateVariableDeclaration.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ModifierDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'virtual'.
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'override'.
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'body'.
+src/nodes/ModifierDefinition.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 4 arguments, but got 3.
+src/nodes/ModifierDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/NameValueExpression.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/print-separated-item.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'indent'.
+src/nodes/print-separated-item.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/print-separated-item.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/print-separated-item.ts:  // @ts-expect-error ts-migrate(7022) FIXME: 'firstSeparator' implicitly has type 'any' because... Remove this comment to see the full error message
+src/nodes/print-separated-item.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'dedent'.
+src/nodes/FunctionDefinition.ts:  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:  // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parameters... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'visibility... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'virtual'.
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'override'.
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'stateMutab... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'returnPara... Remove this comment to see the full error message
+src/nodes/FunctionDefinition.ts:        // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 5.
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'body'.
+src/nodes/FunctionDefinition.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 5.
+src/nodes/FunctionDefinition.ts:    // @ts-expect-error ts-migrate(2554) FIXME: Expected 4 arguments, but got 3.
+src/nodes/FunctionDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/BreakStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyBlock.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/AssemblyBlock.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyBlock.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/AssemblyBlock.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/AssemblyBlock.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+src/nodes/AssemblyBlock.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/IndexAccess.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/IndexAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/IndexAccess.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
+src/nodes/IndexAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/NewExpression.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/EventDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/EventDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parameters... Remove this comment to see the full error message
+src/nodes/EventDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/Conditional.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/Conditional.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/Conditional.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/Mapping.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/IfStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/IfStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/IfStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/IfStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/IfStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ExpressionStatement.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/ExpressionStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/ExpressionStatement.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/ExpressionStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ContinueStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/NameValueList.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'line'.
+src/nodes/NameValueList.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/NameValueList.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/NameValueList.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/AssemblyFunctionDefinition.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/AssemblyFunctionDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/AssemblyFunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/AssemblyFunctionDefinition.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/AssemblyFunctionDefinition.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/TupleExpression.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/TupleExpression.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/TupleExpression.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/TupleExpression.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/EnumValue.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/Block.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
+src/nodes/Block.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/Block.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printPrese... Remove this comment to see the full error message
+src/nodes/Block.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
+src/nodes/Block.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/InlineAssemblyStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/FunctionCall.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/FunctionCall.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/FunctionCall.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/FunctionCall.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printArgum... Remove this comment to see the full error message
+src/nodes/FunctionCall.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
+src/nodes/FunctionCall.ts:        // @ts-expect-error ts-migrate(2322) FIXME: Type 'any[]' is not assignable to type 'string'.
+src/nodes/FunctionCall.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/Identifier.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/comments/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/comments/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/comments/index.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/FunctionTypeName.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/FunctionTypeName.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/FunctionTypeName.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/FunctionTypeName.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'visibility... Remove this comment to see the full error message
+src/nodes/FunctionTypeName.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'stateMutab... Remove this comment to see the full error message
+src/nodes/FunctionTypeName.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/binary-operator-printers/bit.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'arithmetic... Remove this comment to see the full error message
+src/binary-operator-printers/bit.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/MemberAccess.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/MemberAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/MemberAccess.ts:      // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
+src/nodes/MemberAccess.ts:    // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
+src/nodes/MemberAccess.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/EmitStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ArrayTypeName.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/ThrowStatement.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/TypeNameExpression.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/VariableDeclaration.ts:    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'visibility... Remove this comment to see the full error message
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'override'.
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'name'.
+src/nodes/VariableDeclaration.ts:            // @ts-expect-error ts-migrate(2349) FIXME: This expression is not callable.
+src/nodes/VariableDeclaration.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/comments/ignore.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ignoreComm... Remove this comment to see the full error message
+src/comments/ignore.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/BooleanLiteral.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
+src/nodes/CatchClause.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
+src/nodes/CatchClause.ts:// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parameters... Remove this comment to see the full error message
+src/nodes/CatchClause.ts:// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

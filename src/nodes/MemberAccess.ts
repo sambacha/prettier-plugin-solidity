@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, indent, label, softline }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, indent, label, softline},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 const isEndOfChain = (node: any, path: any) => {
@@ -16,7 +16,7 @@ const isEndOfChain = (node: any, path: any) => {
       'FunctionCall',
       'IndexAccess',
       'NameValueExpression',
-      'MemberAccess'
+      'MemberAccess',
     ].includes(parentNode.type)
   ) {
     switch (parentNode.type) {
@@ -110,11 +110,7 @@ const processChain = (chain: any) => {
 };
 
 const MemberAccess = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => {
+  print: ({node, path, print}: any) => {
     let expressionDoc = path.call(print, 'expression');
     if (Array.isArray(expressionDoc)) {
       // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
@@ -124,12 +120,12 @@ const MemberAccess = {
     const doc = [
       expressionDoc,
       label('separator', [softline, '.']),
-      node.memberName
-    // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
+      node.memberName,
+      // @ts-expect-error ts-migrate(2550) FIXME: Property 'flat' does not exist on type 'any[]'. Do... Remove this comment to see the full error message
     ].flat();
 
     return isEndOfChain(node, path) ? processChain(doc) : doc;
-  }
+  },
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

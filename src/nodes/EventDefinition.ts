@@ -8,19 +8,15 @@ const parameters = (node: any, path: any, print: any) =>
     : '';
 
 const EventDefinition = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => [
+  print: ({node, path, print}: any) => [
     'event ',
     node.name,
     '(',
     parameters(node, path, print),
     ')',
     node.isAnonymous ? ' anonymous' : '',
-    ';'
-  ]
+    ';',
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

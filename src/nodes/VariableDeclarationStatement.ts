@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, ifBreak, indent }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, ifBreak, indent},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
@@ -19,11 +19,7 @@ const initialValue = (node: any, path: any, print: any) =>
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'groupIndex... Remove this comment to see the full error message
 let groupIndex = 0;
 const VariableDeclarationStatement = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => {
+  print: ({node, path, print}: any) => {
     const startsWithVar =
       node.variables.filter((x: any) => x && x.typeName).length === 0;
 
@@ -33,9 +29,9 @@ const VariableDeclarationStatement = {
         embraceVariables(
           path.map(print, 'variables'),
           node.variables.length > 1 || startsWithVar
-        )
+        ),
       ],
-      { id: `VariableDeclarationStatement.variables-${groupIndex}` }
+      {id: `VariableDeclarationStatement.variables-${groupIndex}`}
     );
     groupIndex += 1;
     const initialValueDoc = initialValue(node, path, print);
@@ -43,11 +39,11 @@ const VariableDeclarationStatement = {
     return group([
       declarationDoc,
       ifBreak(indent(initialValueDoc), initialValueDoc, {
-        groupId: declarationDoc.id
+        groupId: declarationDoc.id,
       }),
-      node.omitSemicolon ? '' : ';'
+      node.omitSemicolon ? '' : ';',
     ]);
-  }
+  },
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

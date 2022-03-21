@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, hardline, indent, line }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, hardline, indent, line},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
@@ -19,10 +19,10 @@ const modifierParameters = (node: any, path: any, print: any) => {
           // To keep consistency any list of parameters will split if it's longer than 2.
           // For more information see:
           // https://github.com/prettier-solidity/prettier-plugin-solidity/issues/256
-          node.parameters.length > 2 ? hardline : line
-        ]
+          node.parameters.length > 2 ? hardline : line,
+        ],
       }),
-      ')'
+      ')',
     ];
   }
 
@@ -30,7 +30,7 @@ const modifierParameters = (node: any, path: any, print: any) => {
 };
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'virtual'.
-const virtual = (node: any) => node.isVirtual ? [line, 'virtual'] : '';
+const virtual = (node: any) => (node.isVirtual ? [line, 'virtual'] : '');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'override'.
 const override = (node: any, path: any, print: any) => {
@@ -40,7 +40,7 @@ const override = (node: any, path: any, print: any) => {
     line,
     'override(',
     printSeparatedList(path.map(print, 'override')),
-    ')'
+    ')',
   ];
 };
 
@@ -49,19 +49,15 @@ const body = (node: any, path: any, print: any) =>
   node.isVirtual ? group(path.call(print, 'body')) : path.call(print, 'body');
 
 const ModifierDefinition = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => [
+  print: ({node, path, print}: any) => [
     'modifier ',
     node.name,
     modifierParameters(node, path, print),
     group(indent([virtual(node), override(node, path, print)])),
     ' ',
     // @ts-expect-error ts-migrate(2554) FIXME: Expected 4 arguments, but got 3.
-    body(node, path, print)
-  ]
+    body(node, path, print),
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

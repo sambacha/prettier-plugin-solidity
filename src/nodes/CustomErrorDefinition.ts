@@ -8,17 +8,13 @@ const parameters = (node: any, path: any, print: any) =>
     : '';
 
 const CustomErrorDefinition = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => [
+  print: ({node, path, print}: any) => [
     'error ',
     node.name,
     '(',
     parameters(node, path, print),
-    ');'
-  ]
+    ');',
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

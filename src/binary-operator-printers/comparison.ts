@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, line, indent }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, line, indent},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'indentIfNe... Remove this comment to see the full error message
@@ -36,7 +36,7 @@ module.exports = {
     return group([
       path.call(print, 'left'),
       ' ',
-      indentIfNecessary(shouldGroup ? group(right) : right)
+      indentIfNecessary(shouldGroup ? group(right) : right),
     ]);
-  }
+  },
 };

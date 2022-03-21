@@ -14,14 +14,10 @@ const modifierArguments = (node: any, path: any, print: any) => {
 };
 
 const ModifierInvocation = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => [
+  print: ({node, path, print}: any) => [
     node.name,
-    modifierArguments(node, path, print)
-  ]
+    modifierArguments(node, path, print),
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

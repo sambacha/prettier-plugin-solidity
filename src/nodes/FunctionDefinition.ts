@@ -1,11 +1,11 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'dedent'.
-    builders: { dedent, group, hardline, indent, join, line }
+    builders: {dedent, group, hardline, indent, join, line},
   },
   // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
-  util: { getNextNonSpaceNonCommentCharacterIndex }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+  util: {getNextNonSpaceNonCommentCharacterIndex},
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
@@ -24,7 +24,7 @@ const functionName = (node: any, options: any) => {
   // Using the originalText is the next best option.
   // A neat idea would be to rely on the pragma and enforce it but for the
   // moment this will do.
-  const names = { fallback: 'fallback', function: 'function' };
+  const names = {fallback: 'fallback', function: 'function'};
   const name = options.originalText.slice(
     options.locStart(node),
     options.locStart(node) + 8
@@ -34,7 +34,13 @@ const functionName = (node: any, options: any) => {
 };
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parameters... Remove this comment to see the full error message
-const parameters = (parametersType: any, node: any, path: any, print: any, options: any) => {
+const parameters = (
+  parametersType: any,
+  node: any,
+  path: any,
+  print: any,
+  options: any
+) => {
   if (node[parametersType] && node[parametersType].length > 0) {
     return printSeparatedList(path.map(print, parametersType), {
       separator: [
@@ -42,8 +48,8 @@ const parameters = (parametersType: any, node: any, path: any, print: any, optio
         // To keep consistency any list of parameters will split if it's longer than 2.
         // For more information see:
         // https://github.com/prettier-solidity/prettier-plugin-solidity/issues/256
-        node[parametersType].length > 2 ? hardline : line
-      ]
+        node[parametersType].length > 2 ? hardline : line,
+      ],
     });
   }
   if (node.comments && node.comments.length > 0) {
@@ -52,13 +58,14 @@ const parameters = (parametersType: any, node: any, path: any, print: any, optio
       node,
       path,
       options,
-      (comment: any) => options.originalText.charAt(
-        getNextNonSpaceNonCommentCharacterIndex(
-          options.originalText,
-          comment,
-          options.locEnd
-        )
-      ) === ')'
+      (comment: any) =>
+        options.originalText.charAt(
+          getNextNonSpaceNonCommentCharacterIndex(
+            options.originalText,
+            comment,
+            options.locEnd
+          )
+        ) === ')'
     );
     return parameterComments.parts.length > 0
       ? printSeparatedItem(parameterComments)
@@ -68,12 +75,13 @@ const parameters = (parametersType: any, node: any, path: any, print: any, optio
 };
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'visibility... Remove this comment to see the full error message
-const visibility = (node: any) => node.visibility && node.visibility !== 'default'
-  ? [line, node.visibility]
-  : '';
+const visibility = (node: any) =>
+  node.visibility && node.visibility !== 'default'
+    ? [line, node.visibility]
+    : '';
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'virtual'.
-const virtual = (node: any) => node.isVirtual ? [line, 'virtual'] : '';
+const virtual = (node: any) => (node.isVirtual ? [line, 'virtual'] : '');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'override'.
 const override = (node: any, path: any, print: any) => {
@@ -83,14 +91,15 @@ const override = (node: any, path: any, print: any) => {
     line,
     'override(',
     printSeparatedList(path.map(print, 'override')),
-    ')'
+    ')',
   ];
 };
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'stateMutab... Remove this comment to see the full error message
-const stateMutability = (node: any) => node.stateMutability && node.stateMutability !== 'default'
-  ? [line, node.stateMutability]
-  : '';
+const stateMutability = (node: any) =>
+  node.stateMutability && node.stateMutability !== 'default'
+    ? [line, node.stateMutability]
+    : '';
 
 const modifiers = (node: any, path: any, print: any) =>
   node.modifiers.length > 0
@@ -105,22 +114,18 @@ const returnParameters = (node: any, path: any, print: any, options: any) =>
         'returns (',
         // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 5.
         parameters('returnParameters', node, path, print, options),
-        ')'
+        ')',
       ]
     : '';
 
-const signatureEnd = (node: any) => node.body ? dedent(line) : ';';
+const signatureEnd = (node: any) => (node.body ? dedent(line) : ';');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'body'.
-const body = (node: any, path: any, print: any) => (node.body ? path.call(print, 'body') : '');
+const body = (node: any, path: any, print: any) =>
+  node.body ? path.call(print, 'body') : '';
 
 const FunctionDefinition = {
-  print: ({
-    node,
-    path,
-    print,
-    options
-  }: any) => [
+  print: ({node, path, print, options}: any) => [
     functionName(node, options),
     '(',
     // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 5.
@@ -136,12 +141,12 @@ const FunctionDefinition = {
         override(node, path, print),
         modifiers(node, path, print),
         returnParameters(node, path, print, options),
-        signatureEnd(node)
+        signatureEnd(node),
       ])
     ),
     // @ts-expect-error ts-migrate(2554) FIXME: Expected 4 arguments, but got 3.
-    body(node, path, print)
-  ]
+    body(node, path, print),
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

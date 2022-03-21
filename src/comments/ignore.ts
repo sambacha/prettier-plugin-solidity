@@ -1,11 +1,10 @@
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ignoreComm... Remove this comment to see the full error message
 function ignoreComments(path: any) {
   const node = path.getValue();
   // We ignore anything that is not an object
   if (node === null || typeof node !== 'object') return;
 
   const keys = Object.keys(node);
-  keys.forEach((key) => {
+  keys.forEach(key => {
     switch (key) {
       // We ignore `loc` and `range` since these are added by the parser
       case 'loc':
@@ -31,5 +30,4 @@ function ignoreComments(path: any) {
   });
 }
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
-module.exports = ignoreComments;
+export default ignoreComments;

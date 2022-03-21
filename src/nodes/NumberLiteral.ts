@@ -1,10 +1,8 @@
 const NumberLiteral = {
-  print: ({
-    node
-  }: any) =>
+  print: ({node}: any) =>
     node.subdenomination
       ? [node.number, ' ', node.subdenomination]
-      : node.number
+      : node.number,
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

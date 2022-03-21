@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, line, softline }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, line, softline},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
 const semver = require('semver');
@@ -11,13 +11,10 @@ const semver = require('semver');
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
 const printSeparatedList = require('./print-separated-list');
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
-const { printString } = require('../prettier-comments/common/util');
+const {printString} = require('../prettier-comments/common/util');
 
 const ImportDirective = {
-  print: ({
-    node,
-    options
-  }: any) => {
+  print: ({node, options}: any) => {
     const importPath = printString(node.path, options);
     let doc;
 
@@ -48,16 +45,16 @@ const ImportDirective = {
 
       doc = [
         '{',
-        printSeparatedList(symbolAliases, { firstSeparator, separator }),
+        printSeparatedList(symbolAliases, {firstSeparator, separator}),
         '} from ',
-        importPath
+        importPath,
       ];
     } else {
       // import "./Foo.sol";
       doc = importPath;
     }
     return group(['import ', doc, ';']);
-  }
+  },
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

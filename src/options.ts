@@ -2,7 +2,6 @@ const CATEGORY_GLOBAL = 'Global';
 const CATEGORY_COMMON = 'Common';
 const CATEGORY_SOLIDITY = 'Solidity';
 
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'options'.
 const options = {
   printWidth: {
     since: '0.0.0',
@@ -10,21 +9,21 @@ const options = {
     type: 'int',
     default: 80,
     description: 'The line length where Prettier will try wrap.',
-    range: { start: 0, end: Number.POSITIVE_INFINITY, step: 1 }
+    range: {start: 0, end: Number.POSITIVE_INFINITY, step: 1},
   },
   tabWidth: {
     type: 'int',
     category: CATEGORY_GLOBAL,
     default: 2,
     description: 'Number of spaces per indentation level.',
-    range: { start: 0, end: Number.POSITIVE_INFINITY, step: 1 }
+    range: {start: 0, end: Number.POSITIVE_INFINITY, step: 1},
   },
   useTabs: {
     since: '1.0.0',
     category: CATEGORY_GLOBAL,
     type: 'boolean',
     default: false,
-    description: 'Indent with tabs instead of spaces.'
+    description: 'Indent with tabs instead of spaces.',
   },
   bracketSpacing: {
     since: '0.0.0',
@@ -32,14 +31,14 @@ const options = {
     type: 'boolean',
     default: true,
     description: 'Print spaces between brackets.',
-    oppositeDescription: 'Do not print spaces between brackets.'
+    oppositeDescription: 'Do not print spaces between brackets.',
   },
   singleQuote: {
     since: '0.0.0',
     category: CATEGORY_COMMON,
     type: 'boolean',
     default: false,
-    description: 'Use single quotes instead of double quotes.'
+    description: 'Use single quotes instead of double quotes.',
   },
   explicitTypes: {
     category: CATEGORY_SOLIDITY,
@@ -49,25 +48,24 @@ const options = {
     choices: [
       {
         value: 'always',
-        description: 'Prefer explicit types (`uint256`, `int256`, etc.)'
+        description: 'Prefer explicit types (`uint256`, `int256`, etc.)',
       },
       {
         value: 'never',
-        description: 'Prefer type aliases (`uint`, `int`, etc.)'
+        description: 'Prefer type aliases (`uint`, `int`, etc.)',
       },
       {
         value: 'preserve',
-        description: 'Respect the type used by the developer.'
-      }
-    ]
+        description: 'Respect the type used by the developer.',
+      },
+    ],
   },
   compiler: {
     category: CATEGORY_SOLIDITY,
     type: 'string',
     description:
-      'The Solidity compiler version to help us avoid critical errors in format for the wrong version.'
-  }
+      'The Solidity compiler version to help us avoid critical errors in format for the wrong version.',
+  },
 };
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
-module.exports = options;
+export default options;

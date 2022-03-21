@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, line, hardline }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, line, hardline},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
@@ -20,8 +20,8 @@ const inheritance = (node: any, path: any, print: any) =>
     ? [
         ' is',
         printSeparatedList(path.map(print, 'baseContracts'), {
-          firstSeparator: line
-        })
+          firstSeparator: line,
+        }),
       ]
     : line;
 
@@ -31,29 +31,24 @@ const body = (node: any, path: any, options: any, print: any) =>
     ? printSeparatedItem(
         [
           printPreservingEmptyLines(path, 'subNodes', options, print),
-          printComments(node, path, options)
+          printComments(node, path, options),
         ],
-        { firstSeparator: hardline }
+        {firstSeparator: hardline}
       )
     : '';
 
 const ContractDefinition = {
-  print: ({
-    node,
-    options,
-    path,
-    print
-  }: any) => [
+  print: ({node, options, path, print}: any) => [
     group([
       node.kind === 'abstract' ? 'abstract contract' : node.kind,
       ' ',
       node.name,
       inheritance(node, path, print),
-      '{'
+      '{',
     ]),
     body(node, path, options, print),
-    '}'
-  ]
+    '}',
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

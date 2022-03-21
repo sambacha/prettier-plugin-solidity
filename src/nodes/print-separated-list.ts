@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group, indent, join, line, softline }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group, indent, join, line, softline},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // This function will add an indentation to the `list` and separate it from the
@@ -20,7 +20,7 @@ const printSeparatedList = (
     // @ts-expect-error ts-migrate(7022) FIXME: 'firstSeparator' implicitly has type 'any' because... Remove this comment to see the full error message
     firstSeparator = softline,
     separator = [',', line],
-    lastSeparator = firstSeparator
+    lastSeparator = firstSeparator,
   } = {}
 ) => group([indent([firstSeparator, join(separator, list)]), lastSeparator]);
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

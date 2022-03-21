@@ -8,15 +8,11 @@ const printArguments = (node: any, path: any, print: any) =>
     : '';
 
 const InheritanceSpecifier = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) => [
+  print: ({node, path, print}: any) => [
     path.call(print, 'baseName'),
     // @ts-expect-error ts-migrate(2554) FIXME: Expected 2 arguments, but got 3.
-    printArguments(node, path, print)
-  ]
+    printArguments(node, path, print),
+  ],
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

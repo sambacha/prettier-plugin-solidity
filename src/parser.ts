@@ -1,25 +1,22 @@
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-const extractComments = require('solidity-comments-extractor');
+import extractComments from 'solidity-comments-extractor';
 // https://prettier.io/docs/en/plugins.html#parsers
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parser'.
-const parser = require('@solidity-parser/parser');
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'semver'.
-const semver = require('semver');
+import parser from '@solidity-parser/parser';
+
+import semver from 'semver';
 
 const tryHug = (node: any, operators: any) => {
   if (node.type === 'BinaryOperation' && operators.includes(node.operator))
     return {
       type: 'TupleExpression',
       components: [node],
-      isArray: false
+      isArray: false,
     };
   return node;
 };
 
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'parse'.
 function parse(text: any, _parsers: any, options: any) {
   const compiler = semver.coerce(options.compiler);
-  const parsed = parser.parse(text, { loc: true, range: true });
+  const parsed = parser.parse(text, {loc: true, range: true});
   parsed.comments = extractComments(text);
 
   parser.visit(parsed, {
@@ -120,10 +117,10 @@ function parse(text: any, _parsers: any, options: any) {
                   type: 'BinaryOperation',
                   operator: '**',
                   left: ctx.left.right,
-                  right: ctx.right
-                }
+                  right: ctx.right,
+                },
               ],
-              isArray: false
+              isArray: false,
             };
             ctx.left = ctx.left.left;
           }
@@ -147,7 +144,7 @@ function parse(text: any, _parsers: any, options: any) {
             '<<',
             '>>',
             '&',
-            '^'
+            '^',
           ]);
           ctx.right = tryHug(ctx.right, [
             '+',
@@ -158,7 +155,7 @@ function parse(text: any, _parsers: any, options: any) {
             '<<',
             '>>',
             '&',
-            '^'
+            '^',
           ]);
           break;
         case '^':
@@ -170,7 +167,7 @@ function parse(text: any, _parsers: any, options: any) {
             '**',
             '<<',
             '>>',
-            '&'
+            '&',
           ]);
           ctx.right = tryHug(ctx.right, [
             '+',
@@ -180,7 +177,7 @@ function parse(text: any, _parsers: any, options: any) {
             '**',
             '<<',
             '>>',
-            '&'
+            '&',
           ]);
           break;
         case '||':
@@ -191,11 +188,10 @@ function parse(text: any, _parsers: any, options: any) {
         default:
           break;
       }
-    }
+    },
   });
 
   return parsed;
 }
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
-module.exports = parse;
+export default parse;

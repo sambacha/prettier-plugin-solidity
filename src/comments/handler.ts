@@ -1,16 +1,10 @@
-const {
-  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleOwnL... Remove this comment to see the full error message
+import {
   handleOwnLineComment,
-  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleEndO... Remove this comment to see the full error message
   handleEndOfLineComment,
-  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleRema... Remove this comment to see the full error message
   handleRemainingComment,
-  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'isBlockCom... Remove this comment to see the full error message
-  isBlockComment
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-} = require('../prettier-comments/language-js/comments');
+  isBlockComment,
+} from '../prettier-comments/language-js/comments';
 
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'handleCont... Remove this comment to see the full error message
 const handleContractDefinitionComments = require('./handlers/ContractDefinition');
 
 function solidityHandleOwnLineComment(
@@ -20,14 +14,14 @@ function solidityHandleOwnLineComment(
   ast: any,
   isLastComment: any
 ) {
-  const { precedingNode, enclosingNode, followingNode } = comment;
+  const {precedingNode, enclosingNode, followingNode} = comment;
   const handlerArguments = [
     text,
     precedingNode,
     enclosingNode,
     followingNode,
     comment,
-    options
+    options,
   ];
 
   if (
@@ -46,14 +40,14 @@ function solidityHandleEndOfLineComment(
   ast: any,
   isLastComment: any
 ) {
-  const { precedingNode, enclosingNode, followingNode } = comment;
+  const {precedingNode, enclosingNode, followingNode} = comment;
   const handlerArguments = [
     text,
     precedingNode,
     enclosingNode,
     followingNode,
     comment,
-    options
+    options,
   ];
 
   if (
@@ -72,14 +66,14 @@ function solidityHandleRemainingComment(
   ast: any,
   isLastComment: any
 ) {
-  const { precedingNode, enclosingNode, followingNode } = comment;
+  const {precedingNode, enclosingNode, followingNode} = comment;
   const handlerArguments = [
     text,
     precedingNode,
     enclosingNode,
     followingNode,
     comment,
-    options
+    options,
   ];
 
   if (
@@ -91,10 +85,9 @@ function solidityHandleRemainingComment(
   return false;
 }
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
 module.exports = {
   handleOwnLineComment: solidityHandleOwnLineComment,
   handleEndOfLineComment: solidityHandleEndOfLineComment,
   handleRemainingComment: solidityHandleRemainingComment,
-  isBlockComment
+  isBlockComment,
 };

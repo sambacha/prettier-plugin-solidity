@@ -1,11 +1,8 @@
 const {
   doc: {
-    // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hardline'.
-    builders: { hardline, join }
+    builders: {hardline, join},
   },
-  // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNewline... Remove this comment to see the full error message
-  util: { hasNewline }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+  util: {hasNewline},
 } = require('prettier');
 
 function isIndentableBlockComment(comment: any) {
@@ -14,7 +11,7 @@ function isIndentableBlockComment(comment: any) {
   // `*/` delimiters are not included in the comment value, so add them
   // back first.
   const lines = `*${comment.raw}*`.split('\n');
-  return lines.length > 1 && lines.every((line) => line.trim()[0] === '*');
+  return lines.length > 1 && lines.every(line => line.trim()[0] === '*');
 }
 
 function printIndentableBlockComment(comment: any) {
@@ -30,11 +27,10 @@ function printIndentableBlockComment(comment: any) {
           : ` ${index < lines.length - 1 ? line.trim() : line.trimLeft()}`
       )
     ),
-    '*/'
+    '*/',
   ];
 }
 
-// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printComme... Remove this comment to see the full error message
 function printComment(commentPath: any, options: any) {
   const comment = commentPath.getValue();
 
@@ -48,7 +44,7 @@ function printComment(commentPath: any, options: any) {
         if (
           comment.trailing &&
           !hasNewline(options.originalText, options.locStart(comment), {
-            backwards: true
+            backwards: true,
           })
         ) {
           return [hardline, printed];
@@ -65,5 +61,4 @@ function printComment(commentPath: any, options: any) {
   }
 }
 
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message
-module.exports = printComment;
+export default printComment;

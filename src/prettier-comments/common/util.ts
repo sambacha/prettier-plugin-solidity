@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-const stringWidth = require("string-width");
+const stringWidth = require('string-width');
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-const emojiRegex = require("emoji-regex")();
+const emojiRegex = require('emoji-regex')();
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-const escapeStringRegexp = require("escape-string-regexp");
+const escapeStringRegexp = require('escape-string-regexp');
 
 // eslint-disable-next-line no-control-regex
 const notAsciiRegex = /[^\x20-\x7F]/;
@@ -13,11 +13,11 @@ const notAsciiRegex = /[^\x20-\x7F]/;
 function isExportDeclaration(node: any) {
   if (node) {
     switch (node.type) {
-      case "ExportDefaultDeclaration":
-      case "ExportDefaultSpecifier":
-      case "DeclareExportDeclaration":
-      case "ExportNamedDeclaration":
-      case "ExportAllDeclaration":
+      case 'ExportDefaultDeclaration':
+      case 'ExportDefaultSpecifier':
+      case 'DeclareExportDeclaration':
+      case 'ExportNamedDeclaration':
+      case 'ExportAllDeclaration':
         return true;
     }
   }
@@ -27,7 +27,7 @@ function isExportDeclaration(node: any) {
 
 function getParentExportDeclaration(path: any) {
   const parentNode = path.getParentNode();
-  if (path.getName() === "declaration" && isExportDeclaration(parentNode)) {
+  if (path.getName() === 'declaration' && isExportDeclaration(parentNode)) {
     return parentNode;
   }
 
@@ -85,8 +85,8 @@ function skip(chars: any) {
 }
 
 const skipWhitespace = skip(/\s/);
-const skipSpaces = skip(" \t");
-const skipToLineEnd = skip(",; \t");
+const skipSpaces = skip(' \t');
+const skipToLineEnd = skip(',; \t');
 const skipEverythingButNewLine = skip(/[^\r\n]/);
 
 function skipInlineComment(text: any, index: any) {
@@ -94,9 +94,9 @@ function skipInlineComment(text: any, index: any) {
     return false;
   }
 
-  if (text.charAt(index) === "/" && text.charAt(index + 1) === "*") {
+  if (text.charAt(index) === '/' && text.charAt(index + 1) === '*') {
     for (let i = index + 2; i < text.length; ++i) {
-      if (text.charAt(i) === "*" && text.charAt(i + 1) === "/") {
+      if (text.charAt(i) === '*' && text.charAt(i + 1) === '/') {
         return i + 2;
       }
     }
@@ -109,7 +109,7 @@ function skipTrailingComment(text: any, index: any) {
     return false;
   }
 
-  if (text.charAt(index) === "/" && text.charAt(index + 1) === "/") {
+  if (text.charAt(index) === '/' && text.charAt(index + 1) === '/') {
     // @ts-expect-error ts-migrate(2554) FIXME: Expected 3 arguments, but got 2.
     return skipEverythingButNewLine(text, index);
   }
@@ -127,26 +127,26 @@ function skipNewline(text: any, index: any, opts: any) {
 
   const atIndex = text.charAt(index);
   if (backwards) {
-    if (text.charAt(index - 1) === "\r" && atIndex === "\n") {
+    if (text.charAt(index - 1) === '\r' && atIndex === '\n') {
       return index - 2;
     }
     if (
-      atIndex === "\n" ||
-      atIndex === "\r" ||
-      atIndex === "\u2028" ||
-      atIndex === "\u2029"
+      atIndex === '\n' ||
+      atIndex === '\r' ||
+      atIndex === '\u2028' ||
+      atIndex === '\u2029'
     ) {
       return index - 1;
     }
   } else {
-    if (atIndex === "\r" && text.charAt(index + 1) === "\n") {
+    if (atIndex === '\r' && text.charAt(index + 1) === '\n') {
       return index + 2;
     }
     if (
-      atIndex === "\n" ||
-      atIndex === "\r" ||
-      atIndex === "\u2028" ||
-      atIndex === "\u2029"
+      atIndex === '\n' ||
+      atIndex === '\r' ||
+      atIndex === '\u2028' ||
+      atIndex === '\u2029'
     ) {
       return index + 1;
     }
@@ -165,7 +165,7 @@ function hasNewline(text: any, index: any, opts: any) {
 
 function hasNewlineInRange(text: any, start: any, end: any) {
   for (let i = start; i < end; ++i) {
-    if (text.charAt(i) === "\n") {
+    if (text.charAt(i) === '\n') {
       return true;
     }
   }
@@ -175,10 +175,10 @@ function hasNewlineInRange(text: any, start: any, end: any) {
 // Note: this function doesn't ignore leading comments unlike isNextLineEmpty
 function isPreviousLineEmpty(text: any, node: any, locStart: any) {
   let idx = locStart(node) - 1;
-  idx = skipSpaces(text, idx, { backwards: true });
-  idx = skipNewline(text, idx, { backwards: true });
-  idx = skipSpaces(text, idx, { backwards: true });
-  const idx2 = skipNewline(text, idx, { backwards: true });
+  idx = skipSpaces(text, idx, {backwards: true});
+  idx = skipNewline(text, idx, {backwards: true});
+  idx = skipSpaces(text, idx, {backwards: true});
+  const idx2 = skipNewline(text, idx, {backwards: true});
   return idx !== idx2;
 }
 
@@ -206,7 +206,11 @@ function isNextLineEmpty(text: any, node: any, locEnd: any) {
 }
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getNextNon... Remove this comment to see the full error message
-function getNextNonSpaceNonCommentCharacterIndex(text: any, node: any, locEnd: any) {
+function getNextNonSpaceNonCommentCharacterIndex(
+  text: any,
+  node: any,
+  locEnd: any
+) {
   let oldIdx = null;
   let idx = locEnd(node);
   while (idx !== oldIdx) {
@@ -251,18 +255,18 @@ function setLocEnd(node: any, index: any) {
 
 const PRECEDENCE = {};
 [
-  ["|>"],
-  ["||", "??"],
-  ["&&"],
-  ["|"],
-  ["^"],
-  ["&"],
-  ["==", "===", "!=", "!=="],
-  ["<", ">", "<=", ">=", "in", "instanceof"],
-  [">>", "<<", ">>>"],
-  ["+", "-"],
-  ["*", "/", "%"],
-  ["**"]
+  ['|>'],
+  ['||', '??'],
+  ['&&'],
+  ['|'],
+  ['^'],
+  ['&'],
+  ['==', '===', '!=', '!=='],
+  ['<', '>', '<=', '>=', 'in', 'instanceof'],
+  ['>>', '<<', '>>>'],
+  ['+', '-'],
+  ['*', '/', '%'],
+  ['**'],
 ].forEach((tier, i) => {
   tier.forEach(op => {
     // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
@@ -276,20 +280,20 @@ function getPrecedence(op: any) {
 }
 
 const equalityOperators = {
-  "==": true,
-  "!=": true,
-  "===": true,
-  "!==": true
+  '==': true,
+  '!=': true,
+  '===': true,
+  '!==': true,
 };
 const multiplicativeOperators = {
-  "*": true,
-  "/": true,
-  "%": true
+  '*': true,
+  '/': true,
+  '%': true,
 };
 const bitshiftOperators = {
-  ">>": true,
-  ">>>": true,
-  "<<": true
+  '>>': true,
+  '>>>': true,
+  '<<': true,
 };
 
 function shouldFlatten(parentOp: any, nodeOp: any) {
@@ -299,7 +303,7 @@ function shouldFlatten(parentOp: any, nodeOp: any) {
 
   // ** is right-associative
   // x ** y ** z --> x ** (y ** z)
-  if (parentOp === "**") {
+  if (parentOp === '**') {
     return false;
   }
 
@@ -312,9 +316,9 @@ function shouldFlatten(parentOp: any, nodeOp: any) {
   // x * y % z --> (x * y) % z
   if (
     // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
-    (nodeOp === "%" && multiplicativeOperators[parentOp]) ||
+    (nodeOp === '%' && multiplicativeOperators[parentOp]) ||
     // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
-    (parentOp === "%" && multiplicativeOperators[nodeOp])
+    (parentOp === '%' && multiplicativeOperators[nodeOp])
   ) {
     return false;
   }
@@ -344,9 +348,9 @@ function isBitwiseOperator(operator: any) {
   return (
     // @ts-expect-error ts-migrate(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     !!bitshiftOperators[operator] ||
-    operator === "|" ||
-    operator === "^" ||
-    operator === "&"
+    operator === '|' ||
+    operator === '^' ||
+    operator === '&'
   );
 }
 
@@ -354,28 +358,31 @@ function isBitwiseOperator(operator: any) {
 // holds) `function`, `class`, or `do {}`. Will be overzealous if there's
 // already necessary grouping parentheses.
 // @ts-expect-error ts-migrate(7023) FIXME: 'startsWithNoLookaheadToken' implicitly has return... Remove this comment to see the full error message
-function startsWithNoLookaheadToken(node: any, forbidFunctionClassAndDoExpr: any) {
+function startsWithNoLookaheadToken(
+  node: any,
+  forbidFunctionClassAndDoExpr: any
+) {
   node = getLeftMost(node);
   switch (node.type) {
-    case "FunctionExpression":
-    case "ClassExpression":
-    case "DoExpression":
+    case 'FunctionExpression':
+    case 'ClassExpression':
+    case 'DoExpression':
       return forbidFunctionClassAndDoExpr;
-    case "ObjectExpression":
+    case 'ObjectExpression':
       return true;
-    case "MemberExpression":
+    case 'MemberExpression':
       return startsWithNoLookaheadToken(
         node.object,
         forbidFunctionClassAndDoExpr
       );
-    case "TaggedTemplateExpression":
-      if (node.tag.type === "FunctionExpression") {
+    case 'TaggedTemplateExpression':
+      if (node.tag.type === 'FunctionExpression') {
         // IIFEs are always already parenthesized
         return false;
       }
       return startsWithNoLookaheadToken(node.tag, forbidFunctionClassAndDoExpr);
-    case "CallExpression":
-      if (node.callee.type === "FunctionExpression") {
+    case 'CallExpression':
+      if (node.callee.type === 'FunctionExpression') {
         // IIFEs are always already parenthesized
         return false;
       }
@@ -383,27 +390,27 @@ function startsWithNoLookaheadToken(node: any, forbidFunctionClassAndDoExpr: any
         node.callee,
         forbidFunctionClassAndDoExpr
       );
-    case "ConditionalExpression":
+    case 'ConditionalExpression':
       return startsWithNoLookaheadToken(
         node.test,
         forbidFunctionClassAndDoExpr
       );
-    case "UpdateExpression":
+    case 'UpdateExpression':
       return (
         !node.prefix &&
         startsWithNoLookaheadToken(node.argument, forbidFunctionClassAndDoExpr)
       );
-    case "BindExpression":
+    case 'BindExpression':
       return (
         node.object &&
         startsWithNoLookaheadToken(node.object, forbidFunctionClassAndDoExpr)
       );
-    case "SequenceExpression":
+    case 'SequenceExpression':
       return startsWithNoLookaheadToken(
         node.expressions[0],
         forbidFunctionClassAndDoExpr
       );
-    case "TSAsExpression":
+    case 'TSAsExpression':
       return startsWithNoLookaheadToken(
         node.expression,
         forbidFunctionClassAndDoExpr
@@ -426,7 +433,7 @@ function getAlignmentSize(value: any, tabWidth: any, startIndex: any) {
 
   let size = 0;
   for (let i = startIndex; i < value.length; ++i) {
-    if (value[i] === "\t") {
+    if (value[i] === '\t') {
       // Tabs behave in a way that they are aligned to the nearest
       // multiple of tabWidth:
       // 0 -> 4, 1 -> 4, 2 -> 4, 3 -> 4
@@ -441,7 +448,7 @@ function getAlignmentSize(value: any, tabWidth: any, startIndex: any) {
 }
 
 function getIndentSize(value: any, tabWidth: any) {
-  const lastNewlineIndex = value.lastIndexOf("\n");
+  const lastNewlineIndex = value.lastIndexOf('\n');
   if (lastNewlineIndex === -1) {
     return 0;
   }
@@ -456,8 +463,8 @@ function getIndentSize(value: any, tabWidth: any) {
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printStrin... Remove this comment to see the full error message
 function printString(rawContent: any, options: any) {
-  const double = { quote: '"', regex: /"/g };
-  const single = { quote: "'", regex: /'/g };
+  const double = {quote: '"', regex: /"/g};
+  const single = {quote: "'", regex: /'/g};
 
   const preferred = options.singleQuote ? single : double;
   const alternate = preferred === single ? double : single;
@@ -483,11 +490,11 @@ function printString(rawContent: any, options: any) {
   }
 
   const enclosingQuote =
-    options.parser === "json"
+    options.parser === 'json'
       ? double.quote
       : shouldUseAlternateQuote
-        ? alternate.quote
-        : preferred.quote;
+      ? alternate.quote
+      : preferred.quote;
 
   // It might sound unnecessary to use `makeString` even if the string already
   // is enclosed with `enclosingQuote`, but it isn't. The string could contain
@@ -497,14 +504,18 @@ function printString(rawContent: any, options: any) {
     rawContent,
     enclosingQuote,
     !(
-      options.parser === "css" ||
-      options.parser === "less" ||
-      options.parser === "scss"
+      options.parser === 'css' ||
+      options.parser === 'less' ||
+      options.parser === 'scss'
     )
   );
 }
 
-function makeString(rawContent: any, enclosingQuote: any, unescapeUnnecessaryEscapes: any) {
+function makeString(
+  rawContent: any,
+  enclosingQuote: any,
+  unescapeUnnecessaryEscapes: any
+) {
   const otherQuote = enclosingQuote === '"' ? "'" : '"';
 
   // Matches _any_ escape and unescaped quotes (both single and double).
@@ -512,54 +523,59 @@ function makeString(rawContent: any, enclosingQuote: any, unescapeUnnecessaryEsc
 
   // Escape and unescape single and double quotes as needed to be able to
   // enclose `rawContent` with `enclosingQuote`.
-  const newContent = rawContent.replace(regex, (match: any, escaped: any, quote: any) => {
-    // If we matched an escape, and the escaped character is a quote of the
-    // other type than we intend to enclose the string with, there's no need for
-    // it to be escaped, so return it _without_ the backslash.
-    if (escaped === otherQuote) {
-      return escaped;
-    }
+  const newContent = rawContent.replace(
+    regex,
+    (match: any, escaped: any, quote: any) => {
+      // If we matched an escape, and the escaped character is a quote of the
+      // other type than we intend to enclose the string with, there's no need for
+      // it to be escaped, so return it _without_ the backslash.
+      if (escaped === otherQuote) {
+        return escaped;
+      }
 
-    // If we matched an unescaped quote and it is of the _same_ type as we
-    // intend to enclose the string with, it must be escaped, so return it with
-    // a backslash.
-    if (quote === enclosingQuote) {
-      return "\\" + quote;
-    }
+      // If we matched an unescaped quote and it is of the _same_ type as we
+      // intend to enclose the string with, it must be escaped, so return it with
+      // a backslash.
+      if (quote === enclosingQuote) {
+        return '\\' + quote;
+      }
 
-    if (quote) {
-      return quote;
-    }
+      if (quote) {
+        return quote;
+      }
 
-    // Unescape any unnecessarily escaped character.
-    // Adapted from https://github.com/eslint/eslint/blob/de0b4ad7bd820ade41b1f606008bea68683dc11a/lib/rules/no-useless-escape.js#L27
-    return unescapeUnnecessaryEscapes &&
-      /^[^\\nrvtbfux\r\n\u2028\u2029"'0-7]$/.test(escaped)
-      ? escaped
-      : "\\" + escaped;
-  });
+      // Unescape any unnecessarily escaped character.
+      // Adapted from https://github.com/eslint/eslint/blob/de0b4ad7bd820ade41b1f606008bea68683dc11a/lib/rules/no-useless-escape.js#L27
+      return unescapeUnnecessaryEscapes &&
+        /^[^\\nrvtbfux\r\n\u2028\u2029"'0-7]$/.test(escaped)
+        ? escaped
+        : '\\' + escaped;
+    }
+  );
 
   return enclosingQuote + newContent + enclosingQuote;
 }
 
 function printNumber(rawNumber: any) {
-  return rawNumber
-    .toLowerCase()
-    // Remove unnecessary plus and zeroes from scientific notation.
-    .replace(/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/, "$1$2$3")
-    // Remove unnecessary scientific notation (1e0).
-    .replace(/^([+-]?[\d.]+)e[+-]?0+$/, "$1")
-    // Make sure numbers always start with a digit.
-    .replace(/^([+-])?\./, "$10.")
-    // Remove extraneous trailing decimal zeroes.
-    .replace(/(\.\d+?)0+(?=e|$)/, "$1")
-    // Remove trailing dot.
-    .replace(/\.(?=e|$)/, "");
+  return (
+    rawNumber
+      .toLowerCase()
+      // Remove unnecessary plus and zeroes from scientific notation.
+      .replace(/^([+-]?[\d.]+e)(?:\+|(-))?0*(\d)/, '$1$2$3')
+      // Remove unnecessary scientific notation (1e0).
+      .replace(/^([+-]?[\d.]+)e[+-]?0+$/, '$1')
+      // Make sure numbers always start with a digit.
+      .replace(/^([+-])?\./, '$10.')
+      // Remove extraneous trailing decimal zeroes.
+      .replace(/(\.\d+?)0+(?=e|$)/, '$1')
+      // Remove trailing dot.
+      .replace(/\.(?=e|$)/, '')
+  );
 }
 
 function getMaxContinuousCount(str: any, target: any) {
   const results = str.match(
-    new RegExp(`(${escapeStringRegexp(target)})+`, "g")
+    new RegExp(`(${escapeStringRegexp(target)})+`, 'g')
   );
 
   if (results === null) {
@@ -567,7 +583,8 @@ function getMaxContinuousCount(str: any, target: any) {
   }
 
   return results.reduce(
-    (maxCount: any, result: any) => Math.max(maxCount, result.length / target.length),
+    (maxCount: any, result: any) =>
+      Math.max(maxCount, result.length / target.length),
     0
   );
 }
@@ -585,7 +602,7 @@ function getStringWidth(text: any) {
   // emojis are considered 2-char width for consistency
   // see https://github.com/sindresorhus/string-width/issues/11
   // for the reason why not implemented in `string-width`
-  return stringWidth(text.replace(emojiRegex, "  "));
+  return stringWidth(text.replace(emojiRegex, '  '));
 }
 
 function hasIgnoreComment(path: any) {
@@ -595,10 +612,14 @@ function hasIgnoreComment(path: any) {
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'hasNodeIgn... Remove this comment to see the full error message
 function hasNodeIgnoreComment(node: any) {
-  return node &&
-  node.comments &&
-  node.comments.length > 0 &&
-  node.comments.some((comment: any) => comment.value.trim() === "prettier-ignore");
+  return (
+    node &&
+    node.comments &&
+    node.comments.length > 0 &&
+    node.comments.some(
+      (comment: any) => comment.value.trim() === 'prettier-ignore'
+    )
+  );
 }
 
 function matchAncestorTypes(path: any, types: any, index: any) {
@@ -623,7 +644,7 @@ function addCommentHelper(node: any, comment: any) {
   // For some reason, TypeScript parses `// x` inside of JSXText as a comment
   // We already "print" it via the raw text, we don't need to re-print it as a
   // comment
-  if (node.type === "JSXText") {
+  if (node.type === 'JSXText') {
     comment.printed = true;
   }
 }
@@ -706,5 +727,5 @@ module.exports = {
   addLeadingComment,
   addDanglingComment,
   addTrailingComment,
-  isWithinParentArrayProperty
+  isWithinParentArrayProperty,
 };

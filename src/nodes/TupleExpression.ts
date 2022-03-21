@@ -1,9 +1,9 @@
 const {
   doc: {
     // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'group'.
-    builders: { group }
-  }
-// @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
+    builders: {group},
+  },
+  // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
 } = require('prettier');
 
 // @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'printSepar... Remove this comment to see the full error message
@@ -17,16 +17,12 @@ const contents = (node: any, path: any, print: any) =>
     : [printSeparatedList(path.map(print, 'components'))];
 
 const TupleExpression = {
-  print: ({
-    node,
-    path,
-    print
-  }: any) =>
+  print: ({node, path, print}: any) =>
     group([
       node.isArray ? '[' : '(',
       ...contents(node, path, print),
-      node.isArray ? ']' : ')'
-    ])
+      node.isArray ? ']' : ')',
+    ]),
 };
 
 // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'module'. Do you need to install ... Remove this comment to see the full error message

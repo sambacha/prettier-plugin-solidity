@@ -145,5 +145,5 @@ module.exports = {
   // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
   VariableDeclarationStatement: require('./VariableDeclarationStatement'),
   // @ts-expect-error ts-migrate(2580) FIXME: Cannot find name 'require'. Do you need to install... Remove this comment to see the full error message
-  WhileStatement: require('./WhileStatement')
+  WhileStatement: require('./WhileStatement'),
 };
