@@ -88,7 +88,7 @@
     "escape-string-regexp": "^4.0.0",
     "semver": "^7.3.7",
     "solidity-comments-extractor": "^0.0.7",
-    "string-width": "^4.2.3"
+    "string-width": "^5.1.2"
   },
   "peerDependencies": {
     "prettier": "^2.3.0"
