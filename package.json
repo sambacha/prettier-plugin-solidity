@@ -1,7 +1,8 @@
 {
   "name": "prettier-plugin-solidity",
-  "version": "1.0.0-beta.19",
+  "version": "1.0.0-beta.20",
   "description": "A Prettier Plugin for automatically formatting your Solidity code.",
+  "types": "types/index.d.ts",
   "main": "src",
   "scripts": {
     "eslint": "eslint 'scripts/**' 'src/**' 'tests/**'",
