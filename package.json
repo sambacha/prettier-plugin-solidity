@@ -85,7 +85,7 @@
   "dependencies": {
     "@solidity-parser/parser": "^0.14.2",
     "emoji-regex": "^10.1.0",
-    "escape-string-regexp": "^4.0.0",
+    "escape-string-regexp": "^5.0.0",
     "semver": "^7.3.7",
     "solidity-comments-extractor": "^0.0.7",
     "string-width": "^4.2.3"
